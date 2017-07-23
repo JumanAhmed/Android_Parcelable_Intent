@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +22,30 @@ public class MainActivity extends AppCompatActivity {
         person.setFirstName("Juman");
         person.setLastName("Ahmed Jaki");
         person.setQualification("Computer Engineer");
+        person.setHeight(6);
+        person.setGender(Person.GENDER.MALE);
+        person.setHostelPreference(true);
+
+        List<String> qualifications = new ArrayList<>();
+        qualifications.add("SSC From STSC");
+        qualifications.add("HSC From STSC");
+        qualifications.add("B.sc From Mu");
+        person.setQualifications(qualifications);
+
+        List<CityLivedIn> cityLivedIn =new ArrayList<>();
+        CityLivedIn cityLivedIn1 =new CityLivedIn();
+        cityLivedIn1.setCityName("Sylhet");
+        cityLivedIn1.setDate(new Date());
+
+        CityLivedIn cityLivedIn2 = new CityLivedIn();
+        cityLivedIn2.setCityName("Dhaka");
+        cityLivedIn2.setDate(new Date());
+
+        cityLivedIn.add(cityLivedIn1);
+        cityLivedIn.add(cityLivedIn2);
+
+        person.setResidenceHistory(cityLivedIn);
+
 
         Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
 

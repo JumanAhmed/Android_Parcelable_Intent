@@ -16,7 +16,9 @@ public class SecondActivity extends AppCompatActivity {
         tvPerson = (TextView) findViewById(R.id.person);
         Person person = (Person) getIntent().getParcelableExtra("person");
 
-        tvPerson.setText(person.getFirstName()+" "+person.getLastName()+" "+person.getQualification());
+        tvPerson.setText(person.getFirstName()+" "+person.getLastName()+" "+person.getQualification()+" "+
+        person.getHeight()+" "+person.getGender()+" "+person.getQualifications()+" "+
+                person.isHostelPreference()+" "+person.getResidenceHistory());
 
     }
 }
