@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.juman.androidparcelableintent.MainActivity">
 
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    android:id="@+id/button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:onClick="parcle"
+    android:text="Pass Parcelable Object" />
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="parcle"
-        android:text="Pass Parcelable Object" />
+        android:onClick="gotolist"
+        android:text="Implement slider passing object" />
 </LinearLayout>

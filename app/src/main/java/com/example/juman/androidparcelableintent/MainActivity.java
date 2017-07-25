@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.juman.androidparcelableintent.slider.Hotels;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -54,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // Juman Ahmed Jaki
+    public void gotolist(View view) {
+        startActivity(new Intent(getApplicationContext(), Hotels.class));
+
+    }
+
+    // Juman Ahmed Jaki CSE
     // Redwanul Islam
 }
