@@ -41,11 +41,11 @@ public class DataHotels {
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01};
-        int[] slideImage2 = {R.drawable.panthumai_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
+        int[] slideImage2 = {R.drawable.bisanakandi_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01};
-        int[] slideImage3 = {R.drawable.panthumai_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
+        int[] slideImage3 = {R.drawable.bholagonj_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01};
