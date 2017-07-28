@@ -17,12 +17,14 @@ public class SingleHotel extends AppCompatActivity {
     private static ViewPager mPager;
     //private static int currentPage = 0;
     List<SliderDataModel> images;
+    TextView textView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_hotel);
+        textView = (TextView) findViewById(R.id.singleTv);
 
         HotelDataModel hotel = (HotelDataModel)getIntent().getParcelableExtra("hotel");
         images = hotel.getSliderImages();
@@ -32,8 +34,8 @@ public class SingleHotel extends AppCompatActivity {
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
-        //textView.setText(hotel.getName()+", "+hotel.getAddress()+", "+hotel.getContact()+", "+
-        //hotel.getEmail()+", "+hotel.getLocation());
+        textView.setText(hotel.getName()+", "+hotel.getAddress()+", "+hotel.getContact()+", "+
+        hotel.getEmail()+", "+hotel.getLocation());
 
     }
 }

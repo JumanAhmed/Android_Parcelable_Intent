@@ -17,6 +17,7 @@ public class HotelDataModel implements Parcelable{
     private String contact;
     private int imageLogo;
     private String email;
+    private List<Integer> imagesId;
     private List<SliderDataModel> sliderImages;
 
     public HotelDataModel(){
@@ -30,6 +31,7 @@ public class HotelDataModel implements Parcelable{
         contact = in.readString();
         imageLogo = in.readInt();
         email = in.readString();
+        imagesId = in.readArrayList(null);
         sliderImages = in.createTypedArrayList(SliderDataModel.CREATOR);
     }
 
@@ -58,6 +60,7 @@ public class HotelDataModel implements Parcelable{
         parcel.writeString(contact);
         parcel.writeInt(imageLogo);
         parcel.writeString(email);
+        parcel.writeList(imagesId);
         parcel.writeTypedList(sliderImages);
     }
 
@@ -110,6 +113,14 @@ public class HotelDataModel implements Parcelable{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Integer> getImagesId() {
+        return imagesId;
+    }
+
+    public void setImagesId(List<Integer> imagesId) {
+        this.imagesId = imagesId;
     }
 
     public List<SliderDataModel> getSliderImages() {

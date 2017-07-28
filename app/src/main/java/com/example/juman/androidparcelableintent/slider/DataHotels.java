@@ -12,6 +12,7 @@ import java.util.List;
 public class DataHotels {
     public static List<HotelDataModel> getAllHotelData(){
 
+
         List<HotelDataModel>  hotelItems = new ArrayList<>();
 
 
@@ -37,17 +38,17 @@ public class DataHotels {
 
         String[] email={"yes","yes","yes","yes","yes","yes","yes","yes","yes","yes"};
 
-        int[] slideImage1 = {R.drawable.panthumai_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
-                R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
-                R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
-                R.drawable.bisanakandi_01};
-        int[] slideImage2 = {R.drawable.bisanakandi_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
-                R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
+        int[] slideImage1 = {R.drawable.cafe_la_vista,R.drawable.hotel_garden_inn,R.drawable.jadukata_00,
+                R.drawable.etopia,R.drawable.chick_chicken,R.drawable.britania_hotel,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
                 R.drawable.bisanakandi_01};
-        int[] slideImage3 = {R.drawable.bholagonj_01,R.drawable.bholagonj_01,R.drawable.bisanakandi_01,
+        int[] slideImage2 = {R.drawable.etopia,R.drawable.chick_chicken,R.drawable.britania_hotel,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
+                R.drawable.cafe_la_vista,R.drawable.hotel_garden_inn,R.drawable.jadukata_00,
+                R.drawable.bisanakandi_01};
+        int[] slideImage3 = {R.drawable.cafe_la_vista,R.drawable.hotel_garden_inn,R.drawable.jadukata_00,
                 R.drawable.bisanakandi_01,R.drawable.bisanakandi_01,R.drawable.panthumai_01,
+                R.drawable.etopia,R.drawable.chick_chicken,R.drawable.britania_hotel,
                 R.drawable.bisanakandi_01};
 
 
@@ -64,14 +65,21 @@ public class DataHotels {
 
             List<SliderDataModel> sliders = new ArrayList<>();
             for (int j=i; j<i+1; j++){
-                SliderDataModel sliderItem = new SliderDataModel();
+                SliderDataModel sliderDataModel1 = new SliderDataModel();
+                sliderDataModel1.setImage(slideImage1[j]);
 
-                sliderItem.setImage(slideImage1[j]);
-                sliderItem.setImage(slideImage2[j]);
-                sliderItem.setImage(slideImage3[j]);
+                SliderDataModel sliderDataModel2 = new SliderDataModel();
+                sliderDataModel2.setImage(slideImage2[j]);
 
-                sliders.add(sliderItem);
+                SliderDataModel sliderDataModel3 = new SliderDataModel();
+                sliderDataModel3.setImage(slideImage3[j]);
+
+                sliders.add(sliderDataModel1);
+                sliders.add(sliderDataModel2);
+                sliders.add(sliderDataModel3);
+
             }
+
             item.setSliderImages(sliders);
 
             hotelItems.add(item);
