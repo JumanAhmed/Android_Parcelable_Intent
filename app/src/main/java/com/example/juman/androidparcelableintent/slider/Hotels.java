@@ -3,6 +3,7 @@ package com.example.juman.androidparcelableintent.slider;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,6 +39,7 @@ public class Hotels extends AppCompatActivity {
                Intent intent = new Intent(getApplicationContext(), SingleHotel.class);
                //Toast.makeText(getApplicationContext(), hotelItem.getAddress()+" ", Toast.LENGTH_LONG).show();
                 intent.putExtra("hotel", hotelItem);
+
                 startActivity(intent);
 
 
